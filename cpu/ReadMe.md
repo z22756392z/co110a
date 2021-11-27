@@ -34,7 +34,7 @@ CHIP CPU {
     
     Mux16(a=Aout, b=inM, sel=instruction[12], out=AMout);   
 
-    And(a=instruction[15], b=instruction[4], out=loadD);
+    And(a=instruction[15], b=instruction[4], out=loadD);//只有是C instrcution&d2時 才load D register
     DRegister(in=ALUout, load=loadD, out=Dout);    
     
     ALU(x=Dout, y=AMout, zx=instruction[11], nx=instruction[10], 
