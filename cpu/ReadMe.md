@@ -52,7 +52,7 @@ CHIP CPU {
     And(a=positive, b=instruction[0], out=jgt);
     Or(a=jeq, b=jlt, out=jle);
     Or(a=jle, b=jgt, out=jumpToA);              
-    And(a=instruction[15], b=jumpToA, out=PCload); 
+    And(a=instruction[15], b=jumpToA, out=PCload); //只有是C instrcution時才跳
     PC(in=Aout, inc=true, load=PCload, reset=reset, out[0..14]=pc);
 }
 ```
