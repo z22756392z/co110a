@@ -6,7 +6,7 @@
 
 ### Instrction Handling
 
-![image](./CPU_Instrction_Handling)
+![image](./CPU_Instrction_Handling.png)
 
 ### PC
 ![image](./PC.png)
