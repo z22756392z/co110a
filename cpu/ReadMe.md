@@ -43,7 +43,7 @@ CHIP CPU {
         
     Or16(a=false, b=Aout, out[0..14]=addressM);
     Or16(a=false, b=ALUout, out=outM);
-    And(a=instruction[15], b=instruction[3], out=writeM);
+    And(a=instruction[15], b=instruction[3], out=writeM);//只有是C instrcution時 才寫入 Memory
    
     And(a=ZRout, b=instruction[1], out=jeq);    
     And(a=NGout, b=instruction[2], out=jlt);    
